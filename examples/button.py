@@ -15,21 +15,20 @@ the "held" handler at all if you're just doing a standard short/long press actio
 fanshim = FanShim()
 
 # Set the button hold time, in seconds
-fanshim.set_hold_time(1.0)
+fanshim.set_hold_time(2.0)
 
 
 @fanshim.on_press()
 def press_handler():
     print("Pressed")
 
-
-@fanshim.on_release()
+@fanshim.on_release(3.0)
 def release_handler(was_held):
-    print("Released")
-    if was_held:
-        print("Long press.")
-    else:
-        print("Short press.")
+    sync && sudo reboot now
+
+@fanshim.on_release(5.0)
+def release_handler(was_held):
+    sync && sudo shutdown now
 
 
 # Not needed to detect short/long press
