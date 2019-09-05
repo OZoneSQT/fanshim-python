@@ -24,11 +24,11 @@ def press_handler():
 
 @fanshim.on_release(3.0)
 def release_handler(was_held):
-    sync && sudo reboot now
+    sudo reboot now
 
 @fanshim.on_release(5.0)
 def release_handler(was_held):
-    sync && sudo shutdown now
+    sudo shutdown now
 
 
 # Not needed to detect short/long press
