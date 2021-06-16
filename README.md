@@ -143,14 +143,19 @@ Edit crontab file, or create one if it doesn’t already exist.
 crontab -e
 ```
 
-Then select "nano" as editing tool, navigate to the bottum of the file, ehere you add a line:
+Then select "nano" as editing tool, navigate to the bottum of the file, 
+where you add a line. Remember write "python3" when you use Python 3 
+and "python" if you are using python 2.x:
 
 ```python
-@reboot python /home/pi/fanshim-python/examples/shutdown.py &
+@reboot python3 /home/pi/fanshim-python/examples/shutdown.py &
 ```
 
-Press [ctrl] + [x] to exit the crontab file, then press [y] to confirm the changes to the file.
-Then restart the system by pressing [esc] and returning to the terminal window.
+Press [ctrl] + [x] to exit the crontab file, then press [y] to 
+confirm the changes to the file.
+
+Then restart the system by pressing [esc] and 
+returning to the terminal window.
 
 ```python
 sudo reboot
