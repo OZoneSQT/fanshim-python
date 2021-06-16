@@ -132,3 +132,26 @@ You can start it again with:
 fanshim.start_polling()
 ```
 
+## Cron job, to run script on startup
+
+This part, is what i wished Google told me, when learning about cron job's
+To add reboot/shutdown function to the button, you can follow this section:
+
+Edit crontab file, or create one if it doesn’t already exist.
+
+```python
+crontab -e
+```
+
+Then select "nano" as editing tool, navigate to the bottum of the file, ehere you add a line:
+
+```python
+@reboot python /home/pi/fanshim-python/examples/shutdown.py &
+```
+
+Press [ctrl] + [x] to exit the crontab file, then press [y] to confirm the changes to the file.
+Then restart the system by pressing [esc] and returning to the terminal window.
+
+```python
+sudo reboot
+```
